@@ -67,6 +67,7 @@ sudo systemctl enable jenkins
 
 echo "=====> [6]: Ajust Firewall ...."
 sudo yum install -y firewalld
+sudo systemctl start firewalld
 sudo firewall-cmd --permanent --zone=public --add-port=8080/tcp
 sudo firewall-cmd --reload
 
