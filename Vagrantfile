@@ -3,7 +3,7 @@
 
 #-----------------------------------------------------------------------------------------------------------------#
 # 
-# @Autor : Utrains
+# @Autor : keeprich
 # Description : Vagrant file and script for provisionning Jenkins installation for Utrains DevOps Courses
 # Date : 03/22/2022
 #   
@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     config.vm.define "jenkins" do |jenkinshost|
       jenkinshost.vm.box = "centos/7"
       jenkinshost.vm.hostname = "jenkins"
-      jenkinshost.vm.network "private_network", ip: "192.168.56.110"
+      jenkinshost.vm.network "private_network", ip: "192.168.56.170"
       #jenkinshost.vm.box_url = "utrains/centos7"
       jenkinshost.vm.provider :virtualbox do |v|
         v.customize ["modifyvm", :id, "--memory", 2048]
